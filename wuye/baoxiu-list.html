@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>保修管理</title>
+    <link href="/Content/myStyle.css" rel="stylesheet" />
+</head>
+<body class="mainbody">
+    <!-- 目录导航-->
+    <div class="location">
+        <a href="javascript:history.back(-1);" class="back"><i></i><span>返回上一页</span></a>
+        <a href="../center.html" class="home"><i></i><span>首页</span></a>
+        <i class="arrow"></i>
+        <span>业务管理</span>
+        <i class="arrow"></i>
+        <span>报修管理</span>
+    </div>
+    <!--工具栏-->
+    <div class="toolbar-wrap">
+        <div class="l">
+            <span class="l tips-tit">类型：</span>
+            <div class="rule-single-select single-select l">
+                <select data-bind="value:keyType">
+                    <option selected="selected" value="0">全部</option>
+                    <option value="1">公共报修</option>
+                    <option value="2">生活报修</option>
+                </select>
+            </div>
+            <span class="l tips-tit">状态：</span>
+            <div class="rule-single-select single-select l">
+                <select data-bind="value:keyStatus">
+                    <option selected="selected" value="0">全部</option>
+                    <option value="1">等待处理</option>
+                    <option value="2">任务指派中</option>
+                    <option value="3">处理完成</option>
+                    <option value="4">用户已评价</option>
+                    <option value="9">报修未受理</option>
+                </select>
+            </div>
+            
+        </div>
+        <div>
+            <span class="l tips-tit">条件：</span>
+            <div class="rule-single-select single-select l">
+                <select data-bind="value:keyStatus">
+                    <option selected="selected" value="0">报修单号</option>
+                    <option value="1">手机号</option>
+                </select>
+            </div>
+            <input type="text" class="keyword" placeholder="请输入关键字" style="width:250px;" data-bind="value:key">
+            <a id="lbtnSearch" class="btn-search" href="javascript:;" data-bind="click:doSearch">查询</a>
+        </div>
+        <div class="toolbar r">
+            <div class="r l-list" style="float:right;">
+                <ul class="icon-list">
+                    <li><a class="all left-radius big" href="javascript:void(0);" data-bind="click:selectAll"><i></i><span data-bind="text:selectText"></span></a></li>
+                    <li><a class="print right-radius big" id="btnPrint" href="javascript:void(0);"><i></i><span>批量打印</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="line30"></div>
+    <!--文字列表-->
+    <table class="ltable">
+        <thead>
+            <tr class="odd_bg">
+                <th width="4%" data-bind="click:selectAll" class="check-th"><i class="all"></i><span data-bind="text:selectText"></span></th>
+                <th width="8%">报修单号 </th>
+                <th width="10%">小区</th>
+                <th width="9%">房间</th>
+                <th width="5%">用户</th>
+                <th width="7%">报修人电话</th>
+                <th width="7%">报修类型</th>
+                <th width="12%">报修原因</th>
+                <th width="4%">服务评分</th>
+                <th width="7%">报修状态</th>
+                <th width="8%">报修时间</th>
+                <th width="8%">报修更新时间</th>
+                <th width="200px">操作</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach:list()">
+            <tr data-bind="css : { odd_bg: $index() % 2 != 0 }">
+                <td align="center"><input type="checkbox" data-bind="checked:isSelected(),event:{change:function(){ isSelected(!isSelected()); return true;}}"></td>
+                <td data-bind="text:No"></td>
+                <td data-bind="text:CommuntityName"></td>
+                <td data-bind="text:RoomNo"></td>
+                <td data-bind="text:Name"></td>
+                <td data-bind="text:Mobile"></td>
+                <td data-bind="text:Type"></td>
+                <td data-bind="text:Reason"></td>
+                <td data-bind="text:Rate"></td>
+                <td data-bind="text:$root.renderStatus(Result())"></td>
+                <td data-bind="text:$root.renderDateTime(CreateDate())"></td>
+                <td data-bind="text:$root.renderDateTime(UpdateDate())"></td>
+                <td>
+                    <div class="toolbar" style="width:182px;">
+                        <div class="l-list">
+                            <ul class="icon-list">
+                                <li><a class="tool left-radius" href="javascript:void(0);" data-bind='click:function(){ $root.showModelDialog(800,510,"处理-报修单号：" + No(),"/wuye/baoxiu-chuli.html?id=" + Id())}'><i></i><span>处理</span></a></li>
+                                <li><a class="look" href="javascript:void(0);" data-bind='click:function(){ $root.showModelDialog(800,550,"查看-报修单号：" + No(),"/wuye/baoxiu-look.html?id=" + Id())}'><i></i><span>查看</span></a></li>
+                                <li><a class="print right-radius" href="javascript:void(0);"><i></i><span>打印</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="line30"></div>
+    <!--分页列表-->
+    <div class="pagelist r">
+        <div id="pager" class="default r"></div>
+    </div>
+
+    <script src="../Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="../Scripts/Core/datepicker.js"></script>
+    <script src="../Scripts/Core/knockout-3.2.0.js"></script>
+    <script src="../Scripts/Core/knockout.mapping-latest.js"></script>
+    <script src="../Scripts/Core/jquery-json.js"></script>
+    <script src="../Scripts/Plugin/lhgdialog/lhgdialog.js"></script>
+    <script src="../Scripts/Plugin/jquery.pager.js"></script>
+    <script src="../Scripts/Base/common.js"></script>
+    <script src="../Scripts/Base/page.js"></script>
+    <script src="../Scripts/Base/utility.js"></script>
+    <script src="../Scripts/Base/baoxiu-list.js"></script>
+</body>
+</html>

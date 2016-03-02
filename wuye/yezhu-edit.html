@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>业主信息编辑</title>
+    <link href="/Content/myStyle.css" rel="stylesheet" />
+</head>
+<body class="contentbody">
+    <!--向导栏-->
+    <div class="location">
+        <a href="user_list.aspx" class="back"><i></i><span>返回上一页</span></a>
+        <a href="../center.aspx" class="home"><i></i><span>首页</span></a>
+        <i class="arrow"></i>
+        <span>业务管理</span>
+        <i class="arrow"></i>
+        <span>业主信息</span>
+        <i class="arrow"></i>
+        <span>编辑信息</span>
+    </div>
+    <div class="line10"></div>
+    <form id="commonForm">
+        <div class="content-tab-wrap">
+            <div id="floatHead" class="content-tab" style="position: static; top: 52px;">
+                <div class="content-tab-ul-wrap">
+                    <ul>
+                        <li><a href="javascript:;" onclick="tabs(this);" class="selected">基本资料</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+            <dl>
+                <dt>小区：</dt>
+                <dd>
+                    <div class="rule-single-select single-select">
+                        <select datatype="*" sucmsg=" " nullmsg="请选择小区！"
+                                data-bind="options: xiaoQu,optionsText: 'name',optionsValue: 'Id',value:$root.model().CommuntityId,optionsCaption: ' -- 请选择 -- '"></select>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>业主姓名：</dt>
+                <dd><input type="text" data-bind="value:model().Name" class="input normal" datatype="*2-100" sucmsg=" " errormsg="业主姓名至少2个字符,最多100个字符！" nullmsg="请输入业主姓名！"> <span class="Validform_checktip">* 业主姓名，最多255个字符</span></dd>
+            </dl>
+            <dl>
+                <dt>手机号码：</dt>
+                <dd><input type="text" data-bind="value:model().Mobile" class="input normal" datatype="m" sucmsg=" " errormsg="手机号码格式不正确！" nullmsg="请输入手机号码！"> <span class="Validform_checktip">* 手机号码</span></dd>
+            </dl>
+            <dl>
+                <dt>固定电话：</dt>
+                <dd>
+                    <input type="text" data-bind="value:model().Telephone" class="input normal" datatype="*0-20" sucmsg=" ">
+                    <span id="div_sub_title_tip" class="Validform_checktip">可为空，最多255个字符</span>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>楼号：</dt>
+                <dd>
+                    <input type="text" data-bind="value:model().BuilderNo" class="input normal" datatype="*0-255" sucmsg=" ">
+                    <span id="div_sub_title_tip" class="Validform_checktip">可为空，最多255个字符</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>单元号：</dt>
+                <dd>
+                    <input type="text" data-bind="value:model().UnitNo" class="input normal" datatype="*0-255" sucmsg=" ">
+                    <span id="div_sub_title_tip" class="Validform_checktip">可为空，最多255个字符</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>房号：</dt>
+                <dd>
+                    <input type="text" data-bind="value:model().RoomNo" class="input normal" datatype="*0-255" sucmsg=" ">
+                    <span id="div_sub_title_tip" class="Validform_checktip">可为空，最多255个字符</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>面积：</dt>
+                <dd><input type="text" data-bind="value:model().Proportion" class="input normal" datatype="s1-100" sucmsg=" "> <span class="Validform_checktip">*</span></dd>
+            </dl>
+            <dl>
+                <dt>邮箱：</dt>
+                <dd>
+                    <input type="text" data-bind="value:model().Email" class="input normal" datatype="*0-255" sucmsg=" ">
+                    <span id="div_sub_title_tip" class="Validform_checktip">可为空，最多255个字符</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>类型：</dt>
+                <dd>
+                    <div class="rule-multi-radio multi-radio">
+                        <span id="rblStatus">
+                            <input type="radio" name="rblStatus" data-bind="attr:{ checked:model().Type == 0 },event:{change:function(){ model().Type = 0; }}"><label for="rblStatus_0">个人业主</label>
+                            <input type="radio" name="rblStatus" data-bind="attr:{ checked:model().Type == 1 },event:{change:function(){ model().Type=1; }}"><label for="rblStatus_1">公司</label>
+                        </span>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>运营电话：</dt>
+                <dd>
+                    <input type="text" data-bind="value:model().Tel" class="input normal" datatype="*0-255" sucmsg=" ">
+                    <span id="div_sub_title_tip" class="Validform_checktip">可为空，最多255个字符</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>备注：</dt>
+                <dd>
+                    <textarea rows="2" cols="20" data-bind="value:model().Remark" class="input" datatype="*0-255" sucmsg=" "></textarea>
+                    <span class="Validform_checktip">可为空，最多255个字符</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="line10"></div>
+        <div class="page-footer">
+            <input type="submit" name="btnSubmit" value="提交保存" id="btnSubmit" class="btn">
+            <input name="btnReturn" type="button" value="返回上一页" class="btn yellow" onclick="javascript:history.back(-1);">
+        </div>
+    </form>
+    <script src="../Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="../Scripts/Core/jquery-json.js"></script>
+    <script src="../Scripts/Plugin/Validform_v5.3.2_min.js"></script>
+    <script src="../Scripts/Core/knockout-3.2.0.js"></script>
+    <script src="../Scripts/Plugin/lhgdialog/lhgdialog.js"></script>
+    <script src="../Scripts/Base/utility.js"></script>
+    <script src="../Scripts/Base/common.js"></script>
+    <script src="../Scripts/Base/page.js"></script>
+    <script type="text/javascript">
+        var viewModel = (function () {
+            return {
+                xiaoQu: ko.observableArray(),
+                model: ko.observable({ Type: 0 })
+            }
+        })();
+
+        $.extend(page, {
+            result: 0,
+            init: function () {
+                page.getXiaoQuSelect();
+                this.submitBind();
+            },
+            getInfo: function () {
+                page.executeAjax({
+                    url: "/mockdata/yezhu-info.txt",
+                    param: {},
+                    success: function (data, param) {
+                        viewModel.model(data.info);
+                        page.ruleMultiRadio();
+                        page.ruleSingleSelect();
+                    }
+                });
+            },
+            getXiaoQuSelect: function () {
+                page.executeAjax({
+                    url: "/mockdata/xiaoqu-list.txt",
+                    param: {},
+                    success: function (data, param) {
+                        viewModel.xiaoQu(data.data);
+                        if (utility.getQueryString("id")) {
+                            page.getInfo();
+                        } else {
+                            page.ruleMultiRadio();
+                            page.ruleSingleSelect();
+                        }
+                    }
+                });
+            },
+            submitBind: function () {
+                ////初始化表单验证
+                this.result = $("#commonForm").initValidform();
+                $('#commonForm').on("submit", function () {
+                    if (page.result.find(".Validform_error").length > 0) {
+                        return false;
+                    }
+                    console.log(viewModel.model());
+                    //ajax add
+
+                    //如下两者提示效果都可，可根据具体需求选择
+                    page.dialogTips("发布公告成功！", "Success", "/wuye/gonggao-list.html");
+                    //base.dialogOK("发布公告成功！", "/wuye/gonggao-list.html");
+                    return false;
+                });
+            }
+        });
+
+        $(function () {
+            page.init();
+            ko.applyBindings(viewModel);
+        });
+    </script>
+</body>
+</html>

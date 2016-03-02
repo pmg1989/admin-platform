@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>业主信息</title>
+    <link href="/Content/myStyle.css" rel="stylesheet" />
+</head>
+<body class="mainbody">
+    <!-- 目录导航-->
+    <div class="location">
+        <a href="javascript:history.back(-1);" class="back"><i></i><span>返回上一页</span></a>
+        <a href="../center.html" class="home"><i></i><span>首页</span></a>
+        <i class="arrow"></i>
+        <span>业务管理</span>
+        <i class="arrow"></i>
+        <span>业主信息</span>
+    </div>
+    <!--<div class="line10"></div>-->
+    <!--工具栏-->
+    <div class="toolbar-wrap">
+        <div class="l">
+            <div class="rule-single-select single-select l">
+                <select data-bind="value:searchCondition">
+                    <option selected="selected" value="0">业主名称</option>
+                    <option value="1">手机号</option>
+                    <option value="2">楼号</option>
+                    <option value="3">单元号</option>
+                    <option value="4">房间号</option>
+                </select>
+            </div>
+            <input type="text" class="keyword" placeholder="请输入关键词" data-bind="value:key">
+            <a class="btn-search" href="javascript:;" data-bind="click:doSearch">查询</a>
+        </div>
+        <div class="toolbar r">
+            <div class="r l-list" style="float:right;">
+                <ul class="icon-list">
+                    <li><a class="add left-radius big" href="yezhu-edit.html"><i></i><span>新增</span></a></li>
+                    <li><a class="excel-in big" href="javascript:void(0);"><i></i><span>导入表格</span></a></li>
+                    <li><a class="all big" href="javascript:void(0);" data-bind="click:selectAll"><i></i><span data-bind="text:selectText"></span></a></li>
+                    <li><a class="del  right-radius big" id="btnDelete" href="javascript:void(0);" data-bind="click:deleteAll"><i></i><span>批量删除</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="line20"></div>
+    <!--文字列表-->
+    <table class="ltable">
+        <thead>
+            <tr class="odd_bg">
+                <th width="5%" data-bind="click:selectAll" class="check-th"><i class="all"></i><span data-bind="text:selectText"></span></th>
+                <th width="15%">业主名称</th>
+                <th width="8%">手机号</th>
+                <th width="7%">电话</th>
+                <th width="10%">小区</th>
+                <th width="6%">楼号</th>
+                <th width="5%">单元</th>
+                <th width="6%">房号</th>
+                <th width="5%">面积/平</th>
+                <th width="7%">类型</th>
+                <th width="9%">启用时间</th>
+                <th width="8%">运营电话</th>
+                <th width="160px">操作</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach:list()">
+            <tr data-bind="css : { odd_bg: $index() % 2 != 0 }">
+                <td align="center"><input type="checkbox" data-bind="checked:isSelected(),event:{change:function(){ isSelected(!isSelected()); return true;}}"></td>
+                <td data-bind="text:Name"></td>
+                <td data-bind="text:Mobile"></td>
+                <td data-bind="text:Telephone"></td>
+                <td data-bind="text:CommuntityName"></td>
+                <td data-bind="text:BuilderNo"></td>
+                <td data-bind="text:UnitNo"></td>
+                <td data-bind="text:RoomNo"></td>
+                <td data-bind="text:Proportion"></td>
+                <td data-bind="text:$root.renderType(Type())"></td>
+                <td data-bind="text:$root.renderDateTime(CreateTime())"></td>
+                <td data-bind="text:Tel"></td>
+                <td>
+                    <div class="toolbar" style="width:121px;">
+                        <div class="l-list">
+                            <ul class="icon-list">
+                                <li><a class="edit left-radius" id="btnEdit" data-bind="attr:{href:'yezhu-edit.html?id=' + Id()}"><i></i><span>修改</span></a></li>
+                                <li><a class="del  right-radius" id="btnDelete" href="javascript:void(0);" data-bind="click: $root.delCur"><i></i><span>删除</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="line30"></div>
+    <!--分页列表-->
+    <div class="pagelist r">
+        <div id="pager" class="default r"></div>
+    </div>
+    <script src="../Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="../Scripts/Core/datepicker.js"></script>
+    <script src="../Scripts/Core/knockout-3.2.0.js"></script>
+    <script src="../Scripts/Core/knockout.mapping-latest.js"></script>
+    <script src="../Scripts/Core/jquery-json.js"></script>
+    <script src="../Scripts/Plugin/lhgdialog/lhgdialog.js"></script>
+    <script src="../Scripts/Plugin/jquery.pager.js"></script>
+    <script src="../Scripts/Base/common.js"></script>
+    <script src="../Scripts/Base/page.js"></script>
+    <script src="../Scripts/Base/utility.js"></script>
+    <script src="../Scripts/Base/yezhu-list.js"></script>
+</body>
+</html>

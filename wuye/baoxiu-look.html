@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>报修查看</title>
+    <link href="/Content/myStyle.css" rel="stylesheet" />
+</head>
+<body class="contentbody">
+    <div class="tab-content" style="border-top:1px solid #e1e1e1;">
+        <div id="div_view">
+            <dl>
+                <dt>报修单号：</dt>
+                <dd><span data-bind="text:model().No"></span></dd>
+            </dl>
+            <dl>
+                <dt>当前状态：</dt>
+                <dd><span data-bind="text:model().Status"></span></dd>
+            </dl>
+            <dl>
+                <dt>报修人电话：</dt>
+                <dd><span data-bind="text:model().Mobile"></span></dd>
+            </dl>
+            <dl>
+                <dt>房间号：</dt>
+                <dd><span data-bind="text:model().RoomNo"></span></dd>
+            </dl>
+            <dl>
+                <dt>用户：</dt>
+                <dd><span data-bind="text:model().Name"></span></dd>
+            </dl>
+            <dl>
+                <dt>报修类型：</dt>
+                <dd><span data-bind="text:model().Type"></span></dd>
+            </dl>
+            <dl>
+                <dt>报修原因：</dt>
+                <dd><span data-bind="text:model().Reason"></span></dd>
+            </dl>
+            <dl>
+                <dt>报修时间：</dt>
+                <dd><span data-bind="text:renderDateTime(model().CreateDate)"></span></dd>
+            </dl>
+            <dl>
+                <dt>报修说明：</dt>
+                <dd><span data-bind="html:model().Description"></span></dd>
+            </dl>
+            <dl>
+                <dt>追踪信息：</dt>
+                <dd><span data-bind="html:model().MissionInfo"></span></dd>
+            </dl>
+            <dl>
+                <dt>评分：</dt>
+                <dd><span data-bind="text:model().Rate"></span></dd>
+            </dl>
+            <dl>
+                <dt>更新时间：</dt>
+                <dd><span data-bind="text:renderDateTime(model().UpdateDate)"></span></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="line10"></div>
+    <div class="page-footer">
+        <input type="submit" id="btnPrint" value="打 印" class="btn">
+        <input name="btnReturn" type="button" value="返回上一页" class="btn yellow" onclick="javascript:history.back(-1);">
+    </div>
+
+    <script src="../Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="../Scripts/Core/jquery-json.js"></script>
+    <script src="../Scripts/Plugin/Validform_v5.3.2_min.js"></script>
+    <script src="../Scripts/Plugin/lhgdialog/lhgdialog.js"></script>
+    <script src="../Scripts/Core/knockout-3.2.0.js"></script>
+    <script src="../Scripts/Base/common.js"></script>
+    <script src="../Scripts/Base/utility.js"></script>
+    <script src="../Scripts/Base/page.js"></script>
+    <script type="text/javascript">
+        var viewModel = (function () {
+            return {
+                utility: utility,
+                model: ko.observable({ CreateDate: "", UpdateDate: "" }),
+
+                renderDateTime: function (value) {
+                    return utility.JsonDateToDateTimeString(value);
+                }
+            }
+        })();
+
+        $.extend(page, {
+            id: 0,
+            init: function () {
+                this.id = utility.getQueryString("id");
+                this.getInfo();
+                this.printBind();
+            },
+            getInfo: function () {
+                page.executeAjax({
+                    url: "/mockdata/baoxiu-info.txt",
+                    param: {},
+                    success: function (data, param) {
+                        viewModel.model(data.info);
+                    }
+                });
+            },
+            printBind: function () {
+                $("#btnPrint").on("click", function () {
+                    console.log(viewModel.model());
+                    //ajax print
+
+                    page.dialogTips("打印成功！", "Success", "/wuye/baoxiu-list.html");
+                });
+            }
+        });
+
+        $(function () {
+            page.init();
+            ko.applyBindings(viewModel);
+        });
+    </script>
+</body>
+</html>

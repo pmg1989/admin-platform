@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>查看公告</title>
+    <link href="/Content/myStyle.css" rel="stylesheet" />
+</head>
+<body class="contentbody">
+    <div class="content-tab-wrap">
+        <div id="floatHead" class="content-tab" style="position: static; top: 52px;">
+            <div class="content-tab-ul-wrap">
+                <ul>
+                    <li><a href="javascript:;" onclick="tabs(this);" class="selected">查看公告</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div id="div_view">
+            <dl>
+                <dt>小区选择：</dt>
+                <dd><span data-bind="text:data().CommuntityName"></span></dd>
+            </dl>
+            <dl>
+                <dt>公告范围：</dt>
+                <dd><span data-bind="text:data().Range == 0 ? '公开' : '保密'"></span></dd>
+            </dl>
+            <dl>
+                <dt>公告标题：</dt>
+                <dd><span data-bind="text:data().Title"></span></dd>
+            </dl>
+            <dl>
+                <dt>公告详情：</dt>
+                <dd>
+                    <span data-bind="html:data().Content"></span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="line10"></div>
+    <input id="hidModel" type="hidden" value="{&quot;Id&quot;:450,&quot;PropertyId&quot;:0,&quot;PropertyName&quot;:null,&quot;CommuntityId&quot;:null,&quot;CommuntityName&quot;:&quot;巨兴小区,世纪花园一期,艺泰安邦&quot;,&quot;Title&quot;:&quot;居民读书日活动，欢迎踊跃捐书&quot;,&quot;Content&quot;:&quot;居民们：\r\n\<br\/\>为丰富社区文化生活，推进学习型社区的建设。居委研究决定，自十月起将每周五上午9:00——10:00定为“读书日”。\r\n同时设定了一批推荐书籍供居民借阅、传看。也欢迎居民踊跃捐赠图书，丰富社区书库。\r\n地点：居委活动室&quot;,&quot;Type&quot;:0,&quot;Range&quot;:0,&quot;StartTime&quot;:&quot;2014-12-17T11:52:37.13&quot;,&quot;EndTime&quot;:&quot;2014-12-17T11:52:37.13&quot;}" />
+    <script src="../Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="../Scripts/Core/knockout-3.2.0.js"></script>
+    <script src="../Scripts/Base/common.js"></script>
+    <script type="text/javascript">
+        var viewModel = (function () {
+            return {
+                data: ko.observableArray()
+            }
+        })();
+        var page = {};
+        $.extend(page, {
+            init: function () {
+                var model = eval("(" + $("#hidModel").val() + ")");
+                viewModel.data(model);
+            }
+        });
+        $(function () {
+            page.init();
+            ko.applyBindings(viewModel);
+        });
+    </script>
+</body>
+</html>
