@@ -1,0 +1,12 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*================管理首页布局.开始===================*/
+.header{ position:fixed; top:0; right:0; width:100%; height:60px; line-height:60px; z-index:11; background:#000; border-bottom:1px solid #3d3d3d;}
+.header-box{ margin:0 auto; min-width:780px; height:60px; }
+.main-sidebar{ position:absolute; top:60px; bottom:0; left:0; width:180px; }
+.sidebar-nav{ position:absolute; top:0px; bottom:0; left:0; width:180px; padding-right:1px; }
+.main-container{ position:absolute; top:60px; right:0; bottom:60px; left:181px; overflow:hidden; }
+	.main-container iframe{ position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%; }
+.main-footer{ background:#f6f7f7; height:60px; position:absolute; left:181px; bottom:0; right:0; border-top:1px solid #e3e3e3;}
+/*================管理首页布局.结束===================*/
+

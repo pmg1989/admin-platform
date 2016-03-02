@@ -1,0 +1,112 @@
+﻿<div class="list-group" name="内容">
+    <h2>物业管理<i></i></h2>
+            <ul>
+                <li>
+                    <a navid="channel_news_list" href="article/article_list.aspx?channel_id=1" target="mainframe" class="item">
+                        <span>物业公司</span>
+                    </a>
+                </li>
+                <li>
+                    <a navid="channel_news_category" href="article/category_list.aspx?channel_id=1" target="mainframe" class="item">
+                        <span>物业团队</span>
+                    </a>
+                </li>
+            </ul>
+    </ul>
+    <h2>小区管理<i></i></h2>
+    <ul>
+        <li>
+            <a navid="quyu_link" href="/plugins/link/admin/index.aspx" target="mainframe" class="item">
+                <span>区域管理</span>
+            </a>
+        </li>
+        <li>
+            <a navid="xiaoqu_link" href="/plugins/feedback/admin/index.aspx" target="mainframe" class="item">
+                <span>小区管理</span>
+            </a>
+        </li>
+    </ul>
+	<h2>微信管理<i></i></h2>
+    <ul>
+        <li>
+            <a navid="zixun_link" href="/plugins/link/admin/index.aspx" target="mainframe" class="item">
+                <span>资讯管理</span>
+            </a>
+        </li>
+        <li>
+            <a navid="type_link" href="/plugins/feedback/admin/index.aspx" target="mainframe" class="item">
+                <span>资讯类型</span>
+            </a>
+        </li>
+    </ul>
+	<h2>前台控制<i></i></h2>
+    <ul>
+        <li>
+            <a navid="app_link" href="/plugins/link/admin/index.aspx" target="mainframe" class="item">
+                <span>App用户</span>
+            </a>
+        </li>
+        <li>
+            <a navid="Banner_link" href="/plugins/feedback/admin/index.aspx" target="mainframe" class="item">
+                <span>Banner管理</span>
+            </a>
+        </li>
+    </ul>
+    <h2>控制面板<i></i></h2>
+    <ul>
+        <li>
+            <a navid="site_manage" class="item">
+                <span>系统管理</span>
+            </a>
+            <ul>
+                <li>
+                    <a navid="site_config" href="settings/sys_config.aspx" target="mainframe" class="item">
+                        <span>系统设置</span>
+                    </a>
+                </li>
+                <li>
+                    <a navid="site_url_rewrite" href="settings/url_rewrite_list.aspx" target="mainframe" class="item">
+                        <span>URL配置</span>
+                    </a>
+                </li>
+                <li>
+                    <a navid="site_channel_list" href="channel/channel_list.aspx" target="mainframe" class="item">
+                        <span>频道管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a navid="site_channel_category" href="channel/category_list.aspx" target="mainframe" class="item">
+                        <span>频道分类</span>
+                    </a>
+                </li>
+                <li>
+                    <a navid="site_channel_field" href="channel/attribute_field_list.aspx" target="mainframe" class="item">
+                        <span>扩展字段</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a navid="sys_manager" class="item">
+                <span>系统用户</span>
+            </a>
+            <ul>
+                <li>
+                    <a navid="manager_list" href="manager/manager_list.aspx" target="mainframe" class="item">
+                        <span>管理员管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a navid="manager_role" href="manager/role_list.aspx" target="mainframe" class="item">
+                        <span>角色管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a navid="manager_log" href="manager/manager_log.aspx" target="mainframe" class="item">
+                        <span>管理日志</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

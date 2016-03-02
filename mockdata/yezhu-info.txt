@@ -1,0 +1,26 @@
+﻿{
+    "IsSuccess": true,
+    "ErrCode": 0,
+    "ErrMsg": null,
+    "info": {
+        "Id": 891,
+        "CommuntityId": 2,
+        "CommuntityName": "世纪花园一期",
+        "Name": "张三",
+        "Mobile": "18999999999",
+        "Telephone": "2156412314",
+        "Email": "",
+        "BuilderNo": "",
+        "UnitNo": "",
+        "RoomNo": "",
+        "Proportion": 0,
+        "Type": 1,
+        "Remark": "asdfafasf34",
+        "MobileList": null,
+        "CreateTime": "2014-12-18T18: 28: 29.687",
+        "OwnerName": null,
+        "OwnerMobile": null,
+        "MyRoom": null,
+        "Tel": ""
+    }
+}

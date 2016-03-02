@@ -1,0 +1,30 @@
+﻿{
+    "IsSuccess": true,
+    "ErrCode": 0,
+    "ErrMsg": null,
+    "info": {
+        "Id": 56,
+        "ProvinceId": 0,
+        "CityId": 0,
+        "RegionId": 0,
+        "Name": "东郊紫园",
+        "Code": null,
+        "AreaId": 0,
+        "Address": null,
+        "Image": null,
+        "Longitude": 0,
+        "Latitude": 0,
+        "PostCode": null,
+        "Telephone": "021-50331735",
+        "People": 0,
+        "Lng": null,
+        "Lat": null,
+        "HasLife": false,
+        "HasAcitity": false,
+        "CommuntityName": null,
+        "CommuntityPicURL": null,
+        "CreateUserName": null,
+        "OwnUserName": null,
+        "Enabled": false
+    }
+}

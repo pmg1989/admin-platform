@@ -1,0 +1,19 @@
+﻿{
+    "IsSuccess": true,
+    "ErrCode": 0,
+    "ErrMsg": null,
+    "data": [
+        {
+            "Id":1,
+            "name": "东郊紫园"
+        },
+        {
+            "Id":2,
+            "name": "世纪花园一期"
+        },
+        {
+            "Id":3,
+            "name": "世纪花园二期"
+        }
+    ]
+}

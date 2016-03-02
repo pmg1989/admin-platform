@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改密码</title>
+    <link href="/Content/myStyle.css" rel="stylesheet" />
+</head>
+<body class="mainbody">
+    <form id="commonForm">
+        <!--导航栏-->
+        <div class="location">
+            <a href="javascript:history.back(-1);" class="back"><i></i><span>返回上一页</span></a>
+            <a href="../center.html" class="home"><i></i><span>首页</span></a>
+            <i class="arrow"></i>
+            <span>修改密码</span>
+        </div>
+        <div class="line10"></div>
+        <!--/导航栏-->
+        <!--内容-->
+        <div class="content-tab-wrap">
+            <div id="floatHead" class="content-tab">
+                <div class="content-tab-ul-wrap">
+                    <ul>
+                        <li><a href="javascript:;" onclick="tabs(this);" class="selected">修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <dl>
+                <dt>用户名</dt>
+                <dd><input class="input normal" readonly /></dd>
+            </dl>
+            <dl>
+                <dt>旧登录密码</dt>
+                <dd><input class="input normal" type="Password" datatype="*6-20" nullmsg="请输入旧密码" errormsg="密码范围在6-20位之间" sucmsg=" " /> <span class="Validform_checktip">*</span></dd>
+            </dl>
+            <dl>
+                <dt>新登录密码</dt>
+                <dd><input class="input normal" type="Password" id="txtPassword2" datatype="*6-20" nullmsg="请输入新密码" errormsg="密码范围在6-20位之间" sucmsg=" " /> <span class="Validform_checktip">*</span></dd>
+            </dl>
+            <dl>
+                <dt>新确认密码</dt>
+                <dd><input class="input normal" type="Password" id="txtPassword1" datatype="*" recheck="txtPassword2" nullmsg="请再输入一次新密码" errormsg="两次输入的密码不一致" sucmsg=" " /> <span class="Validform_checktip">*</span></dd>
+            </dl>
+            <dl>
+                <dt>姓名</dt>
+                <dd><input class="input normal" /></dd>
+            </dl>
+            <dl>
+                <dt>电话</dt>
+                <dd><input class="input normal" /></dd>
+            </dl>
+            <dl>
+                <dt>邮箱</dt>
+                <dd><input class="input normal" /></dd>
+            </dl>
+        </div>
+        <!--/内容-->
+        <!--工具栏-->
+        <div class="page-footer">
+            <div class="btn-list">
+                <input type="submit" name="btnSubmit" value="提交保存" id="btnSubmit" class="btn">
+                <input name="btnReturn" type="button" value="返回上一页" class="btn yellow" onclick="        javascript: history.back(-1);" />
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--/工具栏-->
+    </form>
+
+    <script src="../Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="../Scripts/Core/jquery-json.js"></script>
+    <script src="../Scripts/Plugin/Validform_v5.3.2_min.js"></script>
+    <script src="../Scripts/Plugin/lhgdialog/lhgdialog.js"></script>
+    <script src="../Scripts/Core/knockout-3.2.0.js"></script>
+    <script src="../Scripts/Base/common.js"></script>
+    <script src="../Scripts/Base/page.js"></script>
+    <script type="text/javascript">
+        ; (function () {
+            $(function () {
+                page.init();
+            });
+        })();
+
+        $.extend(page, {
+            init: function () {
+                this.submitBind();
+            },
+            submitBind: function () {
+                ////初始化表单验证
+                this.result = $("#commonForm").initValidform();
+                $('#commonForm').on("submit", function () {
+                    if (page.result.find(".Validform_error").length > 0) {
+                        return false;
+                    }
+                    console.log(viewModel.model());
+                    //ajax add
+
+                    //如下两者提示效果都可，可根据具体需求选择
+                    page.dialogTips("发布公告成功！", "Success", "/wuye/gonggao-list.html");
+                    //base.dialogOK("发布公告成功！", "/wuye/gonggao-list.html");
+                    return false;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

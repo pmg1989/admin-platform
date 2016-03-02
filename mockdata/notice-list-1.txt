@@ -1,0 +1,73 @@
+﻿{
+    "total": 100,
+    "rows": [
+        {
+            "Id": 451,
+            "PropertyId": 0,
+            "PropertyName": null,
+            "CommuntityId": null,
+            "CommuntityName": "巨兴小区,世纪花园一期,大唐盛世花园,艺泰安邦",
+            "Title": "居民读书日活动",
+            "Content": null,
+            "Type": 0,
+            "Range": 0,
+            "StartTime": "/Date(1418745600000)/",
+            "EndTime": "/Date(1422633600000)/"
+        },
+        {
+            "Id": 450,
+            "PropertyId": 0,
+            "PropertyName": null,
+            "CommuntityId": null,
+            "CommuntityName": "巨兴小区,世纪花园一期,大唐盛世花园,艺泰安邦",
+            "Title": "居民读书日活动，欢迎踊跃捐书",
+            "Content": null,
+            "Type": 0,
+            "Range": 0,
+            "StartTime": "/Date(1418788357130)/",
+            "EndTime": "/Date(1418788357130)/"
+        },
+        {
+            "Id": 446,
+            "PropertyId": 58,
+            "PropertyName": null,
+            "CommuntityId": null,
+            "CommuntityName": "世纪花园一期",
+            "Title": "读书日活动",
+            "Content": null,
+            "Type": 0,
+            "Range": 3,
+            "StartTime": "/Date(1418745600000)/",
+            "EndTime": "/Date(1422633600000)/"
+        },
+        {
+            "Id": 324,
+            "PropertyId": 58,
+            "PropertyName": null,
+            "CommuntityId": null,
+            "CommuntityName": "世纪花园一期",
+            "Title": "散散",
+            "Content": null,
+            "Type": 0,
+            "Range": 0,
+            "StartTime": "/Date(1418128960087)/",
+            "EndTime": "/Date(1418128960087)/"
+        },
+        {
+            "Id": 322,
+            "PropertyId": 58,
+            "PropertyName": null,
+            "CommuntityId": null,
+            "CommuntityName": "世纪花园一期",
+            "Title": "散散",
+            "Content": null,
+            "Type": 0,
+            "Range": 0,
+            "StartTime": "/Date(1418128654413)/",
+            "EndTime": "/Date(1418128654413)/"
+        }
+    ],
+    "IsSuccess": true,
+    "ErrCode": 0,
+    "ErrMsg": null
+}

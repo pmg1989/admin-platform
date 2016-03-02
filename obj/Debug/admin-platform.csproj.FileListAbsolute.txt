@@ -1,0 +1,15 @@
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\MassvigCommuntity.MVC.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\MassvigCommuntity.MVC.pdb
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\Newtonsoft.Json.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.Razor.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.WebPages.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.WebPages.Razor.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.Razor.xml
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.WebPages.xml
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\bin\System.Web.WebPages.Razor.xml
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\obj\Debug\MassvigCommuntity.MVC.dll
+C:\Users\pmg\Downloads\MassvigUI\admin-platform\obj\Debug\MassvigCommuntity.MVC.pdb
