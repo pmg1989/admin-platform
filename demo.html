@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="Content/myStyle.css" rel="stylesheet" />
+    <title></title>
+    <script src="/Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="/Scripts/Base/common.js"></script>
+    <style>
+        body {
+            margin: 30px 100px;
+        }
+
+        .title {
+            height: 30px;
+            line-height: 30px;
+            margin: 20px 0;
+            background-color: #e3e3e3;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">搜索框</div>
+    <div class="l">
+        <input name="txtKeywords" type="text" id="txtKeywords" class="keyword" placeholder="请输入关键词(左浮动)">
+        <a id="lbtnSearch" class="btn-search" href="javascript:;">查询</a>
+    </div>
+    <div class="r">
+        <input name="txtKeywords" type="text" id="txtKeywords" class="keyword" placeholder="请输入关键词(右浮动)">
+        <a id="lbtnSearch" class="btn-search" href="javascript:;">查询</a>
+    </div>
+
+    <div class="clear"></div>
+    <div class="title">操作按钮</div>
+    <div class="l-list">
+        <ul class="icon-list">
+            <li><a class="add left-radius" href="javascript:void(0);"><i></i><span>新增</span></a></li>
+            <li><a class="save" id="btnSave" href="javascript:void(0);"><i></i><span>保存</span></a></li>
+            <li><a class="edit" id="btnEdit" href="javascript:void(0);"><i></i><span>修改</span></a></li>
+            <li><a class="all" href="javascript:void(0);"><i></i><span>全选</span></a></li>
+            <li><a class="del  right-radius" id="btnDelete" href="javascript:void(0);"><i></i><span>删除</span></a></li>
+        </ul>
+    </div>
+
+    <div class="l-list">
+        <ul class="icon-list">
+            <li><a class="add big left-radius" href="javascript:void(0);"><i></i><span>新增</span></a></li>
+            <li><a class="save big" id="btnSave" href="javascript:void(0);"><i></i><span>保存</span></a></li>
+            <li><a class="edit big" id="btnEdit" href="javascript:void(0);"><i></i><span>修改</span></a></li>
+            <li><a class="all big" href="javascript:void(0);"><i></i><span>全选</span></a></li>
+            <li><a class="del big right-radius" id="btnDelete" href="javascript:void(0);"><i></i><span>删除</span></a></li>
+        </ul>
+    </div>
+
+
+    <div class="clear"></div>
+    <div class="title">下拉框</div>
+    <dl>
+        <dt>显示状态：</dt>
+        <dd>
+            <div class="rule-single-select single-select">
+                <select name="ddlStatus" onchange="javascript:void(0);" id="ddlStatus">
+                    <option selected="selected" value="">订单状态</option>
+                    <option value="1">已生成</option>
+                    <option value="2">已确认</option>
+                    <option value="3">已完成</option>
+                    <option value="4">已取消</option>
+                    <option value="5">已作废</option>
+                </select>
+            </div>
+        </dd>
+    </dl>
+
+    <div class="clear"></div>
+    <div class="title">单选框</div>
+    <dl>
+        <dt>显示状态：</dt>
+        <dd>
+            <div class="rule-multi-radio multi-radio">
+                <span id="rblStatus">
+                    <input id="rblStatus_0" type="radio" name="rblStatus" value="0" checked="checked"><label for="rblStatus_0">正常</label>
+                    <input id="rblStatus_1" type="radio" name="rblStatus" value="1"><label for="rblStatus_1">待审核</label>
+                    <input id="rblStatus_2" type="radio" name="rblStatus" value="2"><label for="rblStatus_2">不显示</label>
+                </span>
+            </div>
+        </dd>
+    </dl>
+    <div class="clear"></div>
+    <div class="title">复选框1</div>
+    <div class="rule-multi-checkbox multi-checkbox">
+        <span id="cblItem">
+            <input id="cblItem_0" type="checkbox" name="cblItem$0" value="1" checked="checked"><label for="cblItem_0">允许评论</label>
+            <input id="cblItem_1" type="checkbox" name="cblItem$1" value="1"><label for="cblItem_1">置顶</label>
+            <input id="cblItem_2" type="checkbox" name="cblItem$2" value="1" checked="checked"><label for="cblItem_2">推荐</label>
+            <input id="cblItem_3" type="checkbox" name="cblItem$3" value="1"><label for="cblItem_3">热门</label>
+            <input id="cblItem_4" type="checkbox" name="cblItem$4" value="1"><label for="cblItem_4">幻灯片</label>
+        </span>
+    </div>
+
+
+    <div class="clear"></div>
+    <div class="title">复选框2</div>
+    <dl>
+        <dt>评论状态：</dt>
+        <dd>
+            <div class="rule-multi-porp multi-porp">
+                <span id="cblGroupId">
+                    <input id="cblGroupId_0" type="checkbox" name="cblGroupId$0" checked="checked" value="1"><label for="cblGroupId_0">普通会员</label>
+                    <input id="cblGroupId_1" type="checkbox" name="cblGroupId$1" value="2"><label for="cblGroupId_1">VIP会员</label>
+                </span>
+            </div>
+        </dd>
+    </dl>
+
+    <div class="clear"></div>
+    <div class="title">分页</div>
+    <div class="pagelist">
+        <div class="l-btns">
+            <span>显示</span><input name="txtPageNum" type="text" value="10" onchange="javascript:;" id="txtPageNum" class="pagenum"><span>条/页</span>
+        </div>
+        <div id="PageContent" class="default">
+            <span>共337记录</span>
+            <span class="disabled">«上一页</span>
+            <span class="current">1</span>
+            <a href="javascript:;">2</a>
+            <a href="#">3</a><a href="#">4</a>
+            <span>...</span>
+            <a href="#">10</a>
+            <a href="#">下一页»</a>
+        </div>
+    </div>
+
+
+    <div class="clear"></div>
+    <div class="title">开关按钮</div>
+    <div class="rule-single-checkbox single-checkbox">
+        <input id="cbIsDefault" type="checkbox" name="cbIsDefault" checked="checked">
+    </div>
+    <div class="rule-single-checkbox single-checkbox">
+        <input id="cbIsDefault" type="checkbox" name="cbIsDefault">
+    </div>
+</body>
+</html>

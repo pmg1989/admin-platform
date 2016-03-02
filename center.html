@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="/Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="/Scripts/Base/common.js"></script>
+    <link href="/Content/myStyle.css" rel="stylesheet" />
+    <script type="text/javascript">
+        //管理中心Tab
+        function tabs2(tabObj, cur) {
+            var tabNum = cur;
+            //设置点击后的切换样式
+            $(tabObj).parent().parent().find("li a").removeClass("selected");
+            $(tabObj).addClass("selected");
+            //根据参数决定显示内容
+            $(".tab-content").hide();
+            $(".tab-content").eq(tabNum).show();
+        }
+    </script>
+</head>
+<body>
+    <div class="box-wrap">
+        <div class="line10"></div>
+        <div class="box">
+            <h2>欢迎来到智慧云运营后台管理中心</h2>
+            <div class="line30"></div>
+            <div class="nlist-2">
+                <h3><i></i>站点信息</h3>
+                <ul>
+                    <li>站点名称：智慧云运营后台管理中心</li>
+                    <li>公司名称：上海巨兴数码科技有限公司</li>
+                    <li>网站域名：<a href="http://www.massvig.com" title="上海巨兴数码科技有限公司" target="_blank">http://www.massvig.com</a></li>
+                </ul>
+            </div>
+            <div class="line20"></div>
+            <div class="tongji" style="width:90%; margin:0 auto;">
+                <div class="content-tab-wrap">
+                    <div id="floatHead" class="content-tab">
+                        <div class="content-tab-ul-wrap">
+                            <ul>
+                                <li><a href="javascript:;" onclick="tabs2(this,0);" class="selected">账单信息统计</a></li>
+                                <li><a href="javascript:;" onclick="tabs2(this,1);" class="">保修信息统计</a></li>
+                                <li><a href="javascript:;" onclick="tabs2(this,2);" class="">发布通知信息</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" style="display: block;">
+                    <div class="box-body">
+                        <table border="0" cellspacing="0" cellpadding="0" class="ltable" style="width:60%">
+                            <tbody>
+                                <tr>
+                                    <th>公司名称</th>
+                                    <th>未付款 / 单</th>
+                                    <th>扣款失败 / 单</th>
+                                    <th>已付款 / 单</th>
+                                    <th>已过期 / 单</th>
+                                    <th class="box-title">总计 / 单</th>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-content" style="display: none;">
+                    <div class="box-body">
+                        <table border="0" cellspacing="0" cellpadding="0" class="ltable" style="width:60%">
+                            <tbody>
+                                <tr>
+                                    <th>公司名称</th>
+                                    <th>等待处理 / 单</th>
+                                    <th>派遣中 / 单</th>
+                                    <th>处理完成 / 单</th>
+                                    <th>已评价 / 单</th>
+                                    <th class="box-title">总计 / 单</th>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td><a href="#">50</a></td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-content" style="display: none;">
+                    <div class="box-body">
+                        <table border="0" cellspacing="0" cellpadding="0" class="ltable" style="width:30%">
+                            <tbody>
+                                <tr>
+                                    <th width="55%">公司名称</th>
+                                    <th class="box-title" width="45%">数量 / 单</th>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                                <tr>
+                                    <td>巨兴物业公司</td>
+                                    <td class="box-content"><a href="#">200</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="Content/myStyle.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body class="loginBody">
+    <div class="bg-opticy">
+    </div>
+    <div class="loginWrap">
+        <div class="loginWrapHd">
+            <h1 class="logo">智能社区运营管理后台</h1>
+        </div>
+        <div class="loginWrapBd">
+            <div class="control-group">
+                <input name="txtUserName" type="text" id="txtUserName" class="login-field" placeholder="请输入用户名" title="请输入用户名">
+                <label class="login-field-icon user" for="txtUserName"></label>
+            </div>
+            <div class="control-group">
+                <input name="txtPassword" type="password" id="txtPassword" class="login-field" placeholder="请输入密码" title="请输入密码">
+                <label class="login-field-icon pwd" for="txtPassword"></label>
+            </div>
+            <div class="btn-group">
+                <input type="submit" name="btnSubmit" value="登 录" id="btnSubmit" class="btn-login">
+            </div>
+            <div class="chk-group">
+                <input class="RememberMe" id="RememberMe" type="checkbox" value="true"><label class="lab-remember" for="RememberMe">记住登录状态</label>
+            </div>
+            <div class="login-tips">
+                <i></i><b id="msgtip">请输入用户名或密码</b>
+            </div>
+        </div>
+    </div>
+    <script src="/Scripts/Core/jquery-1.8.2.min.js"></script>
+    <script src="/Scripts/Plugin/jquery-placeholder.js"></script>
+    <script>
+        $(function () {
+            $('input[placeholder]').placeholder();
+            $("#btnSubmit").on("click", function () {
+                if ($("#txtUserName").val().length == 0) {
+                    $(".login-tips").hide().stop(true, true).fadeIn().find("#msgtip").text("用户名不能为空！");
+                    $("#txtUserName").focus();
+                    return;
+                }
+                if ($("#txtPassword").val().length == 0) {
+                    $(".login-tips").hide().stop(true, true).fadeIn().find("#msgtip").text("密码不能为空！");
+                    $("#txtPassword").focus();
+                    return;
+                }
+                $(".login-tips").hide();
+            });
+        });
+    </script>
+</body>
+</html>

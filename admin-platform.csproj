@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C954C0F-DC61-4CA1-9EE6-5B9C29682D30}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MassvigCommuntity.MVC</RootNamespace>
+    <AssemblyName>MassvigCommuntity.MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="center.html" />
+    <Content Include="Content\base.css" />
+    <Content Include="Content\images\1.png" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\close.png" />
+    <Content Include="Content\images\ie_update.jpg" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\massvig-2.png" />
+    <Content Include="Content\images\massvig.png" />
+    <Content Include="Content\images\skin_icons.png" />
+    <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\images\valid_icons.png" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\myStyle.css" />
+    <Content Include="Content\themes\datepicker.css" />
+    <Content Include="demo.html" />
+    <Content Include="ie6update.html" />
+    <Content Include="index.html" />
+    <Content Include="left-menu.html" />
+    <Content Include="login.html" />
+    <Content Include="manage\edit-pwd.html" />
+    <Content Include="mockdata\baoxiu-info.txt" />
+    <Content Include="mockdata\baoxiu-list.txt" />
+    <Content Include="mockdata\fangwu-list.txt" />
+    <Content Include="mockdata\menu.txt" />
+    <Content Include="mockdata\notice-list-1.txt" />
+    <Content Include="mockdata\notice-list-2.txt" />
+    <Content Include="mockdata\postResult.txt" />
+    <Content Include="mockdata\xiaoqu-info.txt" />
+    <Content Include="mockdata\xiaoqu-list.txt" />
+    <Content Include="mockdata\xiaoquM-list.txt" />
+    <Content Include="mockdata\yezhu-info.txt" />
+    <Content Include="mockdata\yezhu-list.txt" />
+    <Content Include="mockdata\zhangdan-info.txt" />
+    <Content Include="mockdata\zhangdan-list.txt" />
+    <Content Include="Scripts\Base\baoxiu-list.js" />
+    <Content Include="Scripts\Base\common.js" />
+    <Content Include="Scripts\Base\fangwu-list.js" />
+    <Content Include="Scripts\Base\index-2.js" />
+    <Content Include="Scripts\Base\index.js" />
+    <Content Include="Scripts\Base\notice-list.js" />
+    <Content Include="Scripts\Base\page.js" />
+    <Content Include="Scripts\Base\utility.js" />
+    <Content Include="Scripts\Base\xiaoqu-list.js" />
+    <Content Include="Scripts\Base\yezhu-list.js" />
+    <Content Include="Scripts\Base\zhangdan-list.js" />
+    <Content Include="Scripts\Core\datepicker.js" />
+    <Content Include="Scripts\Core\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="Scripts\Core\ie6FixPng.js" />
+    <Content Include="Scripts\Core\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\Core\jquery-json.js" />
+    <Content Include="Scripts\Core\knockout-3.2.0.js" />
+    <Content Include="Scripts\Core\knockout-json.min.js" />
+    <Content Include="Scripts\Core\knockout.mapping-latest.js" />
+    <Content Include="Scripts\Plugin\jquery-placeholder.js" />
+    <Content Include="Scripts\Plugin\jquery.nicescroll.js" />
+    <Content Include="Scripts\Plugin\jquery.pager.js" />
+    <Content Include="Scripts\Plugin\lhgdialog\lhgdialog.js" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\blue_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\blue_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\blue_titbtn.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_lt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_rt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_t2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome\chrome_s.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome\chrome_s2.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome\chrome_s3.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\default.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\discuz.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\iblack_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\iblack_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_lt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_rt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_t2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\iblue_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\iblue_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_lt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_rt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_t2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\fail.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\hits.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\i.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\succ.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\alert.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\confirm.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\discuz_bg.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\error.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\face-sad.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\face-smile.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\gb_tip_layer.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\gb_tip_layer_ie6.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\lhgcore.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\loading.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\prompt.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\success.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\tips.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\idialog_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\idialog_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_close.hover.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_close.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\igreen_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\igreen_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\jtop.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\mac.css" />
+    <Content Include="Scripts\Plugin\Validform_v5.3.2_min.js" />
+    <Content Include="wuye\baoxiu-chuli.html" />
+    <Content Include="wuye\baoxiu-list.html" />
+    <Content Include="wuye\baoxiu-look.html" />
+    <Content Include="wuye\fangwu-list.html" />
+    <Content Include="wuye\gonggao-add.html" />
+    <Content Include="wuye\gonggao-list.html" />
+    <Content Include="wuye\gonggao-look.html" />
+    <Content Include="wuye\xiaoqu-edit.html" />
+    <Content Include="wuye\xiaoqu-list.html" />
+    <Content Include="wuye\yezhu-edit.html" />
+    <Content Include="wuye\yezhu-list.html" />
+    <Content Include="wuye\zhangdan-edit.html" />
+    <Content Include="wuye\zhangdan-list.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5934</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5934/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
