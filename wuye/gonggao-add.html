@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <title>添加公告</title>
-    <link href="/Content/myStyle.css" rel="stylesheet" />
+    <link href="Content/myStyle.css" rel="stylesheet" />
 </head>
 <body class="contentbody">
     <form id="commonForm">
@@ -85,7 +85,7 @@
             },
             getXiaoQuSelect: function () {
                 page.executeAjax({
-                    url: "/mockdata/xiaoqu-list.txt",
+                    url: "../mockdata/xiaoqu-list.txt",
                     param: {},
                     success: function (data, param) {
                         viewModel.xiaoQu(data.data);
