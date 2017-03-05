@@ -26,7 +26,7 @@
                 return false;
             }
             page.executeAjax({
-                url: "mockdata/notice-list-2.txt",
+                url: "../mockdata/notice-list-2.txt",
                 param: {
                     key: viewModel.key()
                 },
@@ -45,7 +45,7 @@
                 var params = {};
                 params.id = id;
                 page.executeAjax({
-                    url: "mockdata/postResult.txt",
+                    url: "../mockdata/postResult.txt",
                     param: params,
                     //isPost:true, //post请求
                     success: function (data) {
@@ -66,7 +66,7 @@
                 var params = {};
                 params.idArray = delArray;
                 page.executeAjax({
-                    url: "mockdata/postResult.txt",
+                    url: "../mockdata/postResult.txt",
                     param: params,
                     //isPost:true, //post请求
                     success: function (data) {
@@ -103,7 +103,7 @@
                 params.key = viewModel.key();
 
                 page.executeAjax({
-                    url: "mockdata/notice-list-" + ((pageNo || 0) > 1 ? 1 : ((pageNo || 0) + 1)) + ".txt",
+                    url: "../mockdata/notice-list-" + ((pageNo || 0) > 1 ? 1 : ((pageNo || 0) + 1)) + ".txt",
                     param: params,
                     success: function (data) {
                         viewModel.list(ko.mapping.fromJS(data.rows));
