@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <title>报修查看</title>
-    <link href="/Content/myStyle.css" rel="stylesheet" />
+    <link href="../Content/myStyle.css" rel="stylesheet" />
 </head>
 <body class="contentbody">
     <div class="tab-content" style="border-top:1px solid #e1e1e1;">
@@ -94,7 +94,7 @@
             },
             getInfo: function () {
                 page.executeAjax({
-                    url: "/mockdata/baoxiu-info.txt",
+                    url: "../mockdata/baoxiu-info.txt",
                     param: {},
                     success: function (data, param) {
                         viewModel.model(data.info);
@@ -106,7 +106,7 @@
                     console.log(viewModel.model());
                     //ajax print
 
-                    page.dialogTips("打印成功！", "Success", "/wuye/baoxiu-list.html");
+                    page.dialogTips("打印成功！", "Success", "wuye/baoxiu-list.html");
                 });
             }
         });
