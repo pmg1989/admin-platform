@@ -45,7 +45,7 @@
             }, delArray.length == 0);
         },
         showEditDialog: function () {
-            page.dialogModel(800, 350, "修改小区-" + this.Name(), "wuye/xiaoqu-edit.html?id=" + this.Id());
+            page.dialogModel(800, 350, "修改小区-" + this.Name(), "../wuye/xiaoqu-edit.html?id=" + this.Id());
         }
     });
 
