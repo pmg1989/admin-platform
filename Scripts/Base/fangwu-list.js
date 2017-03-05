@@ -63,7 +63,7 @@
             });
         },
         showLookDialog: function () {
-            page.dialogModel(800, 550, "修改信息-" + this.CommuntityName(), "wuye/gonggao-add.html?id=" + this.Id());
+            page.dialogModel(800, 550, "修改信息-" + this.CommuntityName(), "../wuye/gonggao-add.html?id=" + this.Id());
         }
     });
 
