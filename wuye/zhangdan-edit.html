@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <title>业主信息编辑</title>
-    <link href="/Content/myStyle.css" rel="stylesheet" />
+    <link href="../Content/myStyle.css" rel="stylesheet" />
     <link href="../Content/themes/datepicker.css" rel="stylesheet" />
 </head>
 <body class="contentbody">
@@ -168,7 +168,7 @@
             },
             getInfo: function () {
                 page.executeAjax({
-                    url: "/mockdata/zhangdan-info.txt",
+                    url: "../mockdata/zhangdan-info.txt",
                     param: {},
                     success: function (data, param) {
                         viewModel.model(data.info);
@@ -179,7 +179,7 @@
             },
             getXiaoQuSelect: function () {
                 page.executeAjax({
-                    url: "/mockdata/xiaoqu-list.txt",
+                    url: "../mockdata/xiaoqu-list.txt",
                     param: {},
                     success: function (data, param) {
                         viewModel.xiaoQu(data.data);
@@ -203,7 +203,7 @@
                     //ajax add
 
                     //如下两者提示效果都可，可根据具体需求选择
-                    page.dialogTips("发布公告成功！", "Success", "/wuye/gonggao-list.html");
+                    page.dialogTips("发布公告成功！", "Success", "wuye/gonggao-list.html");
                     //base.dialogOK("发布公告成功！", "/wuye/gonggao-list.html");
                     return false;
                 });

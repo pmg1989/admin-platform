@@ -112,9 +112,9 @@
         },
         showLookDialog: function () {
             if (this.Id) {
-                page.dialogModel(800, 550, "修改账单-" + this.BillNo(), "/wuye/zhangdan-edit.html?id=" + this.Id());
+                page.dialogModel(800, 550, "修改账单-" + this.BillNo(), "wuye/zhangdan-edit.html?id=" + this.Id());
             } else {
-                page.dialogModel(800, 550, "新增账单-", "/wuye/zhangdan-edit.html");
+                page.dialogModel(800, 550, "新增账单-", "wuye/zhangdan-edit.html");
             }
         }
     });
