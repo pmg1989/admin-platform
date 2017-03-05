@@ -111,7 +111,7 @@ _getArgs = function( name )
 },
 
 /*! 取皮肤样式名，默认为 default */
-_skin = _getArgs('skin') || 'default',
+_skin = _getArgs('skin') || 'chrome',
 
 /*! 获取 lhgdialog 可跨级调用的最高层的 window 对象和 document 对象 */
 _doc, _top = (function(w)
@@ -1718,7 +1718,7 @@ lhgdialog.tips = function( content, time, icon, callback )
 	.time(time || 1.5, reIcon);
 };
 
-})(this.jQuery || this.lhgcore, this.lhgdialog);
+})( this.jQuery||this.lhgcore, this.lhgdialog );
 
 // 通用的弹层插件
 
