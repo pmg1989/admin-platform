@@ -23,7 +23,7 @@ function loadMenuTree(_islink) {
     //发送AJAX请求
     $.ajax({
         type: "get",
-        url: "/left-menu.html",
+        url: "left-menu.html",
         dataType: "html",
         success: function (data, textStatus) {
             //将得到的数据插件到页面中
