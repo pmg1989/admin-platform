@@ -65,7 +65,7 @@
                 params.key = viewModel.key();
 
                 page.executeAjax({
-                    url: "/mockdata/xiaoquM-list.txt",
+                    url: "../mockdata/xiaoquM-list.txt",
                     param: params,
                     success: function (data) {
                         viewModel.list(ko.mapping.fromJS(data.rows));

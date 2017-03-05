@@ -28,7 +28,7 @@
                 var params = {};
                 params.id = id;
                 page.executeAjax({
-                    url: "/mockdata/postResult.txt",
+                    url: "../mockdata/postResult.txt",
                     param: params,
                     //isPost:true, //post请求
                     success: function (data) {
@@ -49,7 +49,7 @@
                 var params = {};
                 params.idArray = delArray;
                 page.executeAjax({
-                    url: "/mockdata/postResult.txt",
+                    url: "../mockdata/postResult.txt",
                     param: params,
                     //isPost:true, //post请求
                     success: function (data) {
@@ -83,7 +83,7 @@
                 params.key = viewModel.key();
 
                 page.executeAjax({
-                    url: "/mockdata/fangwu-list.txt",
+                    url: "../mockdata/fangwu-list.txt",
                     param: params,
                     success: function (data) {
                         viewModel.list(ko.mapping.fromJS(data.rows));
