@@ -81,7 +81,7 @@
             });
         },
         showLookDialog: function () {
-            page.dialogModel(800, 550, "查看公告-" + this.Title(), "wuye/gonggao-look.html?id=" + this.Id());
+            page.dialogModel(800, 550, "查看公告-" + this.Title(), "gonggao-look.html?id=" + this.Id());
         }
     });
 
